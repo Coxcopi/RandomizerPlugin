@@ -15,4 +15,4 @@ Download the latest .jar file (either from Github releases or from the Bukkit Pa
 **Note: The plugin should be compatible with any other plugins. If you do experience any issues, make sure to open an Issue on Github or write a comment on the Bukkit page.**
 
 ### Planned Improvements
-- [ ] Add command for adjusting the delay of the Timer.
+- [X] ~~Add command for adjusting the delay of the Timer.~~ (Done)
