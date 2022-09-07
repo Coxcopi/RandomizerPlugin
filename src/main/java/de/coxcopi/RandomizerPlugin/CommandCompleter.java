@@ -12,6 +12,7 @@ public class CommandCompleter implements org.bukkit.command.TabCompleter {
         List<String> list = new ArrayList<>();
         list.add("start");
         list.add("stop");
+        list.add("setdelay");
         return list;
     }
 }

@@ -36,6 +36,29 @@ public class RandomizerCommand implements CommandExecutor {
             }
             return true;
         }
+        if (arg.equals("setdelay")) {
+            if (strings.length < 2) {
+                return false;
+            }
+            int delay;
+            try {
+                delay = Integer.parseInt(strings[1]);
+            } catch (NumberFormatException e) {
+                if (isPlayer) {
+                    Player player = (Player) commandSender;
+                    player.sendMessage("Not a valid number.");
+                }
+                return false;
+            }
+            randomizerPlugin.cancelTimer();
+            randomizerPlugin.setTimerDelay(delay);
+            randomizerPlugin.startTimer();
+            if (isPlayer) {
+                Player player = (Player) commandSender;
+                player.sendMessage("Timer set to a delay of " + delay + " seconds.");
+            }
+            return true;
+        }
         return false;
     }
 }

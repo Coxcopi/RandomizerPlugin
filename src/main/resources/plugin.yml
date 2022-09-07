@@ -1,8 +1,8 @@
 name: Randomizer
 main: de.coxcopi.RandomizerPlugin.RandomizerPlugin
-version: 0.3-D
+version: 1.0
 commands:
   randomizer:
     description: Used to start or stop the Randomizer plugin.
-    usage: /randomizer start | stop
+    usage: /randomizer start | stop | setdelay <seconds>
     permission: de.coxcopi.randomizer.use

@@ -13,6 +13,7 @@ public class RandomizerPlugin extends JavaPlugin {
 
     private Timer timer;
     private TimerTask task;
+    private int timerDelay = 15;
 
     @Override
     public void onEnable() {
@@ -43,12 +44,23 @@ public class RandomizerPlugin extends JavaPlugin {
     }
 
     public void startTimer() {
-
-        timer.scheduleAtFixedRate(task, 15 * 1000, 15 * 1000);
+        timer = new Timer();
+        task = new TimerTask() {
+            @Override
+            public void run() {
+                randomize();
+            }
+        };
+        timer.scheduleAtFixedRate(task, timerDelay * 1000, timerDelay * 1000);
     }
 
     public void cancelTimer() {
         timer.cancel();
+        task.cancel();
+    }
+
+    public void setTimerDelay(int newDelay) {
+        timerDelay = newDelay;
     }
 
 }
