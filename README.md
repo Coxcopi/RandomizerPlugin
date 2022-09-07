@@ -10,7 +10,7 @@ Randomizer currently offers two commands for starting and stopping the timer.
 **/randomizer stop** - Stops the timer (Players no longer recieve items).
 
 ### Installation
-Download the latest .jar file (either from Github releases or from the Bukkit Page) and put it in you plugins directory. Restart your server.
+Download the latest .jar file (either from Github releases or from the Bukkit Page) and put it in your plugins directory. Restart your server.
 
 **Note: The plugin should be compatible with any other plugins. If you do experience any issues, make sure to open an Issue on Github or write a comment on the Bukkit page.**
 
